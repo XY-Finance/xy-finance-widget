@@ -84,3 +84,6 @@ sw.*
 
 # VS Code
 .vscode
+
+# build
+/dist

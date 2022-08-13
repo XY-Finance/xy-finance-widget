@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XY-FINANCE Widget</title>
+</head>
+<body>
+    <div id="xy-finance-widget-root"></div>
+
+<script defer>
+  setTimeout(() => {
+    const config = {
+      fromTokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+      sourceChainId: '1',
+      toTokenAddress: '0x77777777772cf0455fB38eE0e75f38034dFa50DE',
+      targetChainId: '1',
+      amount: 1,
+      slippage: '1',
+      orientation: 'portrait'
+    }
+    xyFinaceWidget.init(config);
+  }, 2000)
+</script>
+</body>
+</html>
