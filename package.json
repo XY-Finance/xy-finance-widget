@@ -1,0 +1,14 @@
+{
+  "name": "xy-finance-widget",
+  "version": "1.0.0",
+  "description": "widget for XY-Finance",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XY-Finance/xy-finance-widget.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XY-Finance/xy-finance-widget/issues"
+  }
+}
