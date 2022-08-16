@@ -179,7 +179,7 @@ export class XYFinaceWidget {
         type = positionInfo.width < XYFinaceWidget.breakpoint ? 'portrait' : 'landscape';
       }
 
-      return type;
+      return 'portrait';
   }
 
 
