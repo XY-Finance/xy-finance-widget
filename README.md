@@ -47,4 +47,4 @@
 | targetChainId    | String | '1' |
 | amount           | Number | 1   |
 | slippage         | String | '1' |
-| orientation      | `'portrait` or `landscape` For now, only support 'portrait' | 'portrait' |
+| orientation      | `portrait` or `landscape` For now, only support 'portrait' | 'portrait' |
