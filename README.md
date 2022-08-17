@@ -8,7 +8,7 @@
 1. Paste this code as high in the `<head>` of the page as possible
 
 ```
-<script type="text/javascript" src="https://widget.xy.finance/js/bundle.min.js"></script> 
+<script defer type="text/javascript" src="https://widget.xy.finance/js/bundle.min.js"></script> 
 ```
 
 2. Paste this `<div>` tag to the place where you need widget to display in body
