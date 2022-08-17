@@ -1,6 +1,6 @@
 # XY-Finance-widget
 
-![alt text](https://github.com/XY-Finance/xy-finance-widget/blob/9eda14ffcd00cca7fb7b6c6acc3800830f93d213/src/assets/example.png "")
+![alt text](https://github.com/XY-Finance/xy-finance-widget/blob/9b84e902ac635d4f43834d2db92e6693a6fc6f65/src/assets/example.png "")
 
 
 ## Get Started
