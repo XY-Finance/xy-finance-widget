@@ -31,7 +31,9 @@ export class XYFinaceWidget {
     targetChainId: '1',
     amount: 1,
     slippage: '1',
-    orientation: 'portrait'
+    orientation: 'portrait',
+    theme: 'dark',
+    lockmode: 'none'
   }
 
   private get root(): HTMLElement | null {
@@ -106,6 +108,7 @@ export class XYFinaceWidget {
       } as any;
 
       const query = queryString.stringify(parameters).replaceAll('&', '&amp;');
+      const bgColor = config.theme === 'light' ? '#EEEEEE' : '#14171a';
 
       const iframeNode = `
       <div id="xy-finance-placeholder" style="
@@ -116,7 +119,7 @@ export class XYFinaceWidget {
           justify-content: center;
           border-radius: 20px; 
           box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1);
-          background-color: #14171a;
+          background-color: ${bgColor};
       ">
         <svg width="100" height="100" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 0C31.0457 0 40 8.95428 40 20L39.9973 20.3307C39.8207 31.2239 30.9353 40 20 40L19.867 39.9996C15.4799 39.971 11.4287 38.5289 8.1442 36.1073L34.4129 10.1845H26.3735L20.2519 16.1004L17.5429 13.4061H6.80331L14.8281 21.4508L4.06728 32.0889L3.99104 31.9879C1.48542 28.6472 0 24.4973 0 20L0.00267944 19.6693C0.179296 8.77609 9.0648 0 20 0ZM25.8337 21.6066L20.4273 26.8527L23.1123 29.5205L33.8645 29.5225L25.8337 21.6066Z" fill="url(#paint0_radial_10365_20726)"/>
@@ -137,7 +140,7 @@ export class XYFinaceWidget {
           style="border: none; border-radius: 29px; box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1); display: none;"
           src="${process.env.BASE_URL}/?orientation=${type}${query ? '&amp;' + query : ''}"
           onload="onFrameLoad()"
-          allow="clipboard-read; clipboard-write"
+          allow="clipboard-read; clipboard-write; usb; bluetooth"
       >
       </iframe>
       `;
