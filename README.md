@@ -29,7 +29,9 @@
     targetChainId: '1',
     amount: 1,
     slippage: '1',
-    orientation: 'portrait'
+    orientation: 'portrait',
+    theme: 'dark',
+    lockmode: 'none'
   }
   
   // use widget
@@ -47,4 +49,6 @@
 | targetChainId    | String | '1' |
 | amount           | Number | 1   |
 | slippage         | String | '1' |
-| orientation      | `portrait` or `landscape` For now, only support 'portrait' | 'portrait' |
+| orientation      | `portrait` or `landscape` For now, only support `portrait` | `portrait` |
+| theme            | `dark` or `light` | `dark` |
+| lockmode         | `none` or `both ` or `fromToken` or `toToken` | `none` |
