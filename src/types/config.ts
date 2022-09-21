@@ -29,6 +29,8 @@ export type ChainIdNumber =
   | '1818'
 
 export type Orientation = 'portrait' | 'landscape'
+export type Theme = 'dark' | 'light'
+export type LockMode = 'both' | 'fromToken' | 'toToken' | 'none'
 
 export interface Config {
   fromTokenAddress: string
@@ -38,4 +40,7 @@ export interface Config {
   amount?: number
   slippage?: string
   orientation?: Orientation
+  theme: Theme
+  lockmode: LockMode
+  pagecolor?: string
 }
