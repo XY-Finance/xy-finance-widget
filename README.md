@@ -31,7 +31,8 @@
     slippage: '1',
     orientation: 'portrait',
     theme: 'dark',
-    lockmode: 'none'
+    lockmode: 'none',
+    pagecolor: null
   }
   
   // use widget
@@ -52,3 +53,4 @@
 | orientation      | `portrait` or `landscape` For now, only support `portrait` | `portrait` |
 | theme            | `dark` or `light` | `dark` |
 | lockmode         | `none` or `both ` or `fromToken` or `toToken` | `none` |
+| pagecolor        | String or null Only use HexColor without # | null |

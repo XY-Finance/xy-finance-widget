@@ -33,7 +33,8 @@ export class XYFinaceWidget {
     slippage: '1',
     orientation: 'portrait',
     theme: 'dark',
-    lockmode: 'none'
+    lockmode: 'none',
+    pagecolor: null    
   }
 
   private get root(): HTMLElement | null {

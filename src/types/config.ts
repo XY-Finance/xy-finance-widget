@@ -42,4 +42,5 @@ export interface Config {
   orientation?: Orientation
   theme: Theme
   lockmode: LockMode
+  pagecolor?: string
 }
