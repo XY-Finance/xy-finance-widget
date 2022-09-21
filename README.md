@@ -52,5 +52,5 @@
 | slippage         | String | '1' |
 | orientation      | `portrait` or `landscape` For now, only support `portrait` | `portrait` |
 | theme            | `dark` or `light` | `dark` |
-| lockmode         | `none` or `both ` or `fromToken` or `toToken` | `none` |
+| lockmode         | `none` or `both` or `fromToken` or `toToken` | `none` |
 | pagecolor        | String or null Only use HexColor without # | null |
