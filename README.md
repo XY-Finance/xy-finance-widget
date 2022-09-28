@@ -21,22 +21,24 @@
 
 ```
 <script defer>
-  // set default config
-  let config = {
-    fromTokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
-    sourceChainId: '1',
-    toTokenAddress: '0x77777777772cf0455fB38eE0e75f38034dFa50DE',
-    targetChainId: '1',
-    amount: 1,
-    slippage: '1',
-    orientation: 'portrait',
-    theme: 'dark',
-    lockmode: 'none',
-    pagecolor: null
-  }
-  
-  // use widget
-  xyFinaceWidget.init(config);
+  setTimeout(() => {
+    // set default config
+    const config = {
+      fromTokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+      sourceChainId: '1',
+      toTokenAddress: '0x77777777772cf0455fB38eE0e75f38034dFa50DE',
+      targetChainId: '1',
+      amount: 1,
+      slippage: '1',
+      orientation: 'portrait',
+      theme: 'dark',
+      lockmode: 'none',
+      pagecolor: null
+    }
+
+    // use widget
+    xyFinaceWidget.init(config);
+  }, 2000)
 </script>
 ```
 
