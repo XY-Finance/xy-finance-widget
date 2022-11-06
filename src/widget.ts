@@ -80,6 +80,14 @@ export class XYFinaceWidget {
     this.addStyle([fadeinAnimation, rootStyles]);
   }
 
+  private replaceAll(str: string, match: string, replacement: string){
+    function escapeRegExp(string: string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+
+    return str.replace(new RegExp(escapeRegExp(match), 'g'), ()=>replacement);
+ }
+
   public init(config: Config = this.config, initialize = true): void {
     if (!config) {
         config = this.config;
@@ -108,7 +116,7 @@ export class XYFinaceWidget {
           device
       } as any;
 
-      const query = queryString.stringify(parameters).replaceAll('&', '&amp;');
+      const query = this.replaceAll(queryString.stringify(parameters), '&', '&amp;')
       const bgColor = config.theme === 'light' ? '#EEEEEE' : '#14171a';
 
       const iframeNode = `
