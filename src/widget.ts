@@ -1,7 +1,7 @@
 import queryString from 'query-string';
 import { Config, Orientation } from './types/config'
 
-export class XYFinaceWidget {
+export class XYFinanceWidget {
   private static iframeId = 'xy-finance-iframe';
   private static rootId = 'xy-finance-widget-root';
   private static placeholderId = 'xy-finance-placeholder';
@@ -38,15 +38,15 @@ export class XYFinaceWidget {
   }
 
   private get root(): HTMLElement | null {
-      return document.getElementById(XYFinaceWidget.rootId);
+      return document.getElementById(XYFinanceWidget.rootId);
   }
 
   private get iframe(): HTMLElement | null {
-      return document.getElementById(XYFinaceWidget.iframeId);
+      return document.getElementById(XYFinanceWidget.iframeId);
   }
 
   private get placeholder(): HTMLElement | null {
-      return document.getElementById(XYFinaceWidget.placeholderId);
+      return document.getElementById(XYFinanceWidget.placeholderId);
   }
 
   constructor() {
@@ -68,7 +68,7 @@ export class XYFinaceWidget {
 
     const rootStyles = `
       <style>
-        #${XYFinaceWidget.rootId} {
+        #${XYFinanceWidget.rootId} {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -121,8 +121,8 @@ export class XYFinaceWidget {
 
       const iframeNode = `
       <div id="xy-finance-placeholder" style="
-          height: ${XYFinaceWidget.sizes[type].height}px;
-          width: ${XYFinaceWidget.sizes[type].width}px;
+          height: ${XYFinanceWidget.sizes[type].height}px;
+          width: ${XYFinanceWidget.sizes[type].width}px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -144,8 +144,8 @@ export class XYFinaceWidget {
       <iframe
           id="xy-finance-iframe"
           title="XY-Finance Widget"
-          height="${XYFinaceWidget.sizes[type].height}"
-          width="${XYFinaceWidget.sizes[type].width}"
+          height="${XYFinanceWidget.sizes[type].height}"
+          width="${XYFinanceWidget.sizes[type].width}"
           style="border: none; border-radius: 29px; box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1); display: none;"
           src="${process.env.BASE_URL}/?orientation=${type}${query ? '&amp;' + query : ''}"
           onload="onFrameLoad()"
@@ -170,8 +170,8 @@ export class XYFinaceWidget {
           if (this.config.orientation !== 'portrait' && this.config.orientation !== 'landscape') {
               const rootWidth = this.root.getBoundingClientRect().width;
               if (
-                  (this.orientation === 'portrait' && rootWidth >= XYFinaceWidget.breakpoint) ||
-                  (this.orientation === 'landscape' && rootWidth < XYFinaceWidget.breakpoint)
+                  (this.orientation === 'portrait' && rootWidth >= XYFinanceWidget.breakpoint) ||
+                  (this.orientation === 'landscape' && rootWidth < XYFinanceWidget.breakpoint)
               ) {
                   this.init(null, false);
               } else {
@@ -188,7 +188,7 @@ export class XYFinaceWidget {
         type = orientation;
       } else {
         const positionInfo = this.root!.getBoundingClientRect();
-        type = positionInfo.width < XYFinaceWidget.breakpoint ? 'portrait' : 'landscape';
+        type = positionInfo.width < XYFinanceWidget.breakpoint ? 'portrait' : 'landscape';
       }
 
       return 'portrait';
@@ -198,8 +198,8 @@ export class XYFinaceWidget {
   private tryGetRoot(): HTMLElement {
       const root = this.root;
       if (!root) {
-          console.error(`[XYFINANCE WIDGET] You should place <div id="${XYFinaceWidget.rootId}"></div> into <body></body>`);
-          throw new Error(`You should place <div id="${XYFinaceWidget.rootId}"></div> into <body></body>`);
+          console.error(`[XYFINANCE WIDGET] You should place <div id="${XYFinanceWidget.rootId}"></div> into <body></body>`);
+          throw new Error(`You should place <div id="${XYFinanceWidget.rootId}"></div> into <body></body>`);
       }
 
       return root;
@@ -226,7 +226,7 @@ export class XYFinaceWidget {
         return;
       }
 
-      const isWidgetIntoViewport = XYFinaceWidget.isElementInViewport(iframe);
+      const isWidgetIntoViewport = XYFinanceWidget.isElementInViewport(iframe);
       if (this.isWidgetIntoViewport === isWidgetIntoViewport && force !== true) {
           return;
       }

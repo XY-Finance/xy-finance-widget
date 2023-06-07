@@ -37,7 +37,7 @@
     }
 
     // use widget
-    xyFinaceWidget.init(config);
+    xyFinanceWidget.init(config);
   }, 2000)
 </script>
 ```
