@@ -23,7 +23,7 @@ export class XYFinaceWidget {
 
   private resizeObserver: ResizeObserver
 
-  private static breakpoint = 832
+  private static breakpoint = 768
   private config: Config = {
     fromTokenAddress: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
     sourceChainId: '1',
